@@ -5,16 +5,19 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ApiComponent } from './api/api.component';
-
+import { PopupComponent } from './popup/popup.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ApiComponent
+    ApiComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule.forRoot()
   
   ],
   providers: [Http],

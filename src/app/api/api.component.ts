@@ -14,10 +14,21 @@ export class ApiComponent implements OnInit {
   title:string;
   country:string;
   imgurl:string ;
+  data1:JSON;
 
   constructor(private httpClient:HttpClient) { }
 
   ngOnInit() {
+
+    this.httpClient.get('http://www.omdbapi.com/?i=tt3896198&apikey=131728ac')
+    //and then we have subcribe which is an ajax object 
+    .subscribe(
+      //in the parameter of the subscribe we data object we can this declare as an array or single object
+      (data:any)=>{
+        this.data1 = data;
+       
+      }
+    )
   }
   doGET() {
     // we checking that the function is called or not 
@@ -29,6 +40,7 @@ export class ApiComponent implements OnInit {
     .subscribe(
       //in the parameter of the subscribe we data object we can this declare as an array or single object
       (data:any)=>{
+        this.data1 = data;
         //checking the data wether data has came 
         console.log(data)
         //geting the Title form the json and assign 
