@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{trigger, transition,state, style, animate} from '@angular/animations'
 
 
 //which is used to import the Client side http request
@@ -8,6 +9,16 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-api',
   templateUrl: './api.component.html',
   styleUrls: ['./api.component.css'],
+  animations:[
+    trigger('fade',[
+      
+      transition('void => *',[
+        style({backgroundColor: 'yellow',opacity:0}),
+        animate(2000,style({backgroundColor:'white',opacity:1}))
+      ])
+      
+    ])
+  ]
   
 })
 export class ApiComponent implements OnInit {

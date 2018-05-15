@@ -1,10 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-
+import{trigger} from '@angular/animations'
 @Component({
   selector: 'app-popup',
   templateUrl: './popup.component.html',
-  styleUrls: ['./popup.component.css']
+  styleUrls: ['./popup.component.css'],
+  animations:[
+    trigger('fade',[
+
+      
+    ])
+  ]
 })
 export class PopupComponent implements OnInit {
   closeResult: string;

@@ -8,10 +8,12 @@
     <!-- where are placing the function on the click -->
 
 
-  	<button class="btn btn-primary" (click)="doGET()">GET</button>
-		<img src="{{imgurl}}" alt="">
-		<p>{{data1.Title}}</p>
-		<p>{{data1.Title}}</p>
+  	<button @fade class="btn btn-primary" (click)="doGET()">GET</button>
+		<img 
+		@fade
+		src="{{imgurl}}" alt="">
+		<p @fade >{{data1.Title}}</p>
+		<p @fade >{{data1.Title}}</p>
     
     
     
@@ -39,8 +41,8 @@
 </div> -->
 
 
-<div>
-
+<div 	@fade>
+	
 
   {{title}}<br>
   {{country}}
