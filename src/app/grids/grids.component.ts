@@ -23,6 +23,8 @@ export class GridsComponent implements OnInit {
   country:string;
 
 
+  
+
 
 
    movies = [];
@@ -61,6 +63,7 @@ export class GridsComponent implements OnInit {
   }
 
   removeItem(event) {
+    console.log(event.target.id);
 
     this.movies.splice(event.target.id, 1);
 

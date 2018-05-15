@@ -3,55 +3,62 @@
   <div class="grid-container"> 
 
     <div class="box">
-
-      <h3 class="h3-color" (click)="removeItem($event)" id=0> {{ this.movies[0] }}</h3>
+<!-- 
+      <h3 class="h3-color" (click)="removeItem($event)" id=0> </h3> -->
+        
+        
+        <!-- {{ this.movies[0] }} -->
+        <img *ngIf ="this.movies[0]" (click)="removeItem($event)" id = "0"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[0]].poster_path}}" alt="" width="150" height="150">
+      
+      
+      
       <!--h5>{{ name }}</h5-->
     
       </div>
 
       <div class="box">
 
-          <h3 class="h3-color" (click)="removeItem($event)" id=1>{{ this.movies[1]}}</h3>
-      
+          <!-- <h3 class="h3-color" (click)="removeItem($event)" id=1>{{ this.movies[1]}}</h3> -->
+          <img *ngIf = "this.movies[1]"  (click)="removeItem($event)" id = "1"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[1]].poster_path}}" alt="" width="150" height="150">
         </div>
 
         <div class="box">
 
-            <h3 class="h3-color" (click)="removeItem($event)" id=2>{{ this.movies[2]}}</h3>
-        
+            <!-- <h3 class="h3-color" (click)="removeItem($event)" id=2>{{ this.movies[2]}}</h3> -->
+            <img  *ngIf= "this.movies[2]" (click)="removeItem($event)" id = "2"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[2]].poster_path}}" alt="" width="150" height="150">
           </div>
 
           <div class="box">
 
-              <h3 class="h3-color" (click)="removeItem($event)" id=3>{{ this.movies[3]}}</h3>
-          
+              <!-- <h3 class="h3-color" (click)="removeItem($event)" id=3>{{ this.movies[3]}}</h3> -->
+              <img   *ngIf= "this.movies[3]" (click)="removeItem($event)" id = "3"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[3]].poster_path}}" alt="" width="150" height="150">
             </div>
 
             <div class="box">
 
-                <h3 class="h3-color"  (click)="removeItem($event)" id=4>{{ this.movies[4]}}</h3>
-            
+                <!-- <h3 class="h3-color"  (click)="removeItem($event)" id=4>{{ this.movies[4]}}</h3> -->
+                <img  *ngIf = "this.movies[4]" (click)="removeItem($event)" id = "4"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[4]].poster_path}}" alt="" width="150" height="150">
               </div>
 
               <div class="box">
 
-                  <h3 class="h3-color" (click)="removeItem($event)" id=5>{{ this.movies[5]}}</h3>
-              
+                  <!-- <h3 class="h3-color" (click)="removeItem($event)" id=5>{{ this.movies[5]}}</h3> -->
+                  <img  *ngIf="this.movies[5]" (click)="removeItem($event)" id = "5"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[5]].poster_path}}" alt="" width="150" height="150">
                 </div>
 
                 <div class="box">
 
-                    <h3 class="h3-color"  (click)="removeItem($event)" id=6>{{ this.movies[6]}}</h3>
-                
+                    <!-- <h3 class="h3-color"  (click)="removeItem($event)" id=6>{{ this.movies[6]}}</h3> -->
+                    <img *ngIf = "this.movies[6]" (click)="removeItem($event)" id = "6"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[6]].poster_path}}" alt="" width="150" height="150">
                   </div>  <div class="box">
 
-                      <h3 class="h3-color"  (click)="removeItem($event)" id=7>{{ this.movies[7]}}</h3>
-                  
+                      <!-- <h3 class="h3-color"  (click)="removeItem($event)" id=7>{{ this.movies[7]}}</h3> -->
+                      <img *ngIf = "this.movies[7]" (click)="removeItem($event)" id = "7"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[7]].poster_path}}" alt="" width="150" height="150">
                     </div>
       
   </div>
   
-  <div class="wrapper">
+  <!-- <div class="wrapper">
       
       <div class="nested">
 
@@ -64,6 +71,21 @@
         <div (click)="onclick($event)" id=7>7</div>
         <div (click)="onclick($event)" id=8>8</div>
         <div (click)="onclick($event)" id=9>9</div>
+
+      </div>
+    
+  </div> -->
+   
+  <div class="wrapper">
+      
+      <div class="nested">
+          <div *ngFor="let item of arrayOne(num1); let i = index;">
+              <img  (click)="onclick($event)" id = "{{i}}"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[i].poster_path}}" alt="" width="150" height="150">
+              <p (click)="onclick($event)" id = "{{i}}">{{data1.results[i].title}}</p>
+            </div>
+
+
+     
 
       </div>
     
