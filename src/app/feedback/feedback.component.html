@@ -1,0 +1,25 @@
+<p>
+  feedback works!
+</p>
+<h1>Movie name</h1> <input #movieName (keyup)="0">
+   
+<h4>decription</h4><input #dec (keyup)="0">
+<br>
+<br>
+<h6>rating</h6><input #rating (keyup)="0">
+<br>
+<br>
+
+
+
+
+<button (click)="onk(movieName.value,dec.value,rating.value)" >Send </button>
+
+
+<div *ngFor="let item of arrayOne(num1); let i = index;">
+  
+<h1>{{data1[i].MovieName}}</h1>
+<h2>{{data1[i].Description}}</h2>
+<h3>{{data1[i].Rating}}</h3>
+</div>
+

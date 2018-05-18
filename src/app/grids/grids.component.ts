@@ -52,8 +52,9 @@ export class GridsComponent implements OnInit {
     console.log(event.target.id);
 
     this.id = event.target.id;
-    
+    if (this.movies.length <= 7){
     this.movies.push(this.id);
+    }
     
     console.log(this.movies);
 

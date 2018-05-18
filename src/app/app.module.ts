@@ -11,6 +11,7 @@ import { PopupComponent } from './popup/popup.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { GridsComponent } from './grids/grids.component';
 import { Api2Component } from './api2/api2.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { Api2Component } from './api2/api2.component';
     ApiComponent,
     PopupComponent,
     GridsComponent,
-    Api2Component
+    Api2Component,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
