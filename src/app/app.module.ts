@@ -12,6 +12,17 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { GridsComponent } from './grids/grids.component';
 import { Api2Component } from './api2/api2.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { Fire1Component } from './fire1/fire1.component';
+
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { MaterialComponent } from './material/material.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -20,13 +31,20 @@ import { FeedbackComponent } from './feedback/feedback.component';
     PopupComponent,
     GridsComponent,
     Api2Component,
-    FeedbackComponent
+    FeedbackComponent,
+    Fire1Component,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     NgbModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    FormsModule ,
+    MatCheckboxModule,
+    MatRadioModule
   
   ],
   providers: [Http],

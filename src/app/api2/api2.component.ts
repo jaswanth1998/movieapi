@@ -12,6 +12,7 @@ export class Api2Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }
